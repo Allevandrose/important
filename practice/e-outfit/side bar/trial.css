@@ -1,0 +1,60 @@
+:root {
+    --primary-color: hsl(210, 45%, 45%);
+    --secondary-color: hsl(210, 45%, 15%);
+    --shadow-color: hsl(210, 45%, 35%);
+    --light-shadow-color: hsl(210, 45%, 85%);
+    --toggle-button-color: hsl(25, 45%, 45%);
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+main {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.toggle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--toggle-button-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 0 0 5px var(--light-shadow-color);
+    cursor: pointer;
+}
+
+.dark-mode body {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.dark-mode .sidebar {
+    box-shadow: 0 0 10px var(--light-shadow-color);
+}
+
+.dark-mode .toggle-button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}

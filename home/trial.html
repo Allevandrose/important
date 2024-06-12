@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    background-image: url("images/tokyobackground.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.katikati {
+    width: 300px;
+    margin: 20px auto;
+}
+
+.katikati img {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.prev,.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,.next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+    color: #4a08ef;
+    font-size: 25px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: flex;
+    transition: background-color 0.6s ease;
+}
+
+.active,.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity:.4} 
+    to {opacity: 1}
+}
+
+.Main {
+    display: flex;
+    flex-flow: row;
+    background-color: black;
+    padding: 20px;
+}
+
+.Left,.right {
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    background-color: red;
+    color: black;
+    border-radius: 10px;
+}
+
+.Left {
+    background-image: url("images/play\ stop.gif");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.right {
+    background-image: url("images/play\ stop.gif");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.Main iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+   .Main {
+        flex-direction: column;
+    }
+   .Left,.right {
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+   .slideshow-container {
+        width: 100%;
+        margin: 10px auto;
+    }
+   .mySlides img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+   .Main {
+        flex-direction: column;
+    }
+   .Left,.right {
+        width: 100%;
+        margin: 5px;
+        padding: 5px;
+    }
+   .slideshow-container {
+        width: 100%;
+        margin: 5px auto;
+    }
+   .mySlides img {
+        width: 100%;
+        height: auto;
+    }
+}
+    </style>
+</head>
+<body>
+<!-- body -->
+    <!-- Header section -->
+    <header>
+        <div class="topnav">
+            <i class="fa-solid fa-crown fa-bounce"></i>
+            <a href="#">HOME</a>
+            <i class="fa-solid fa-crown fa-bounce">
+                <a href="contact.html">CONTACT</a></i>
+            <i class="fa-solid fa-crown fa-bounce">
+                <a href="Signup.html">Signup</a></i>
+                <i class="fa-solid fa-crown fa-bounce">
+                    <a href="Login.html">Login</a></i>
+        </div>
+        <div class="katikati">
+            <a target="_blank" href="https://www.instagram.com/ykfrcharm.i.a/"><img src="images/@YKFRCHARMIA IG.jpeg" alt="SOCIALMEDIA"></a>
+        </div>
+        <h1>STREAM <img class="store" src="images/music-store.gif"></h1>
+    </header>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/YKFRCHARMIA.jpg" style="width:100%"/>
+            <div class="text">YKFRNATION</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/MOFDESIGNSTORE.jpg" style="width:100%"/>
+            <div class="text">MARCHOFFAITH</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <video controls style="width:100%; height: auto;">
+                <source src="video/MONJE BRIAN X YKFR CHARMIA - ACHIENG.mp4" type="video/mp4"/>
+            </video>
+            <div class="text"></div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots navigator -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <!-- Main content -->
+    <main>
+        <aside class="Left">
+            <h3 style="font-family: fantasy;">TATUTISAFAMILY</h3>
+            <div>
+                <i class="fa-brands fa-instagram fa-bounce"></i>
+                <button>
+                    <a href="https://www.instagram.com/tatutisafamily/" target="_blank">@Tatutisafamily</a>
+                </button><br><br>
+                <i class="fa-brands fa-square-youtube fa-bounce"></i>
+                <button><a href="https://youtu.be/bTV5mrEwh1w?si=9AnvxA97G-dCZcXl" target="_blank"> @Tatutisafamily</a>
+                </button>
+            <h2 style="font-family: fantasy;">TopAlbums</h2>
+            <img class="store" src="images/music-store.gif">
+            <iframe src="https://audiomack.com/embed/tatutisafamily/album/saaj-mixtape" scrolling="no" width="90%" height="300" scrollbars="no" frameborder="0"></iframe>
+        </aside>
+        <main>
+            <iframe width="500" height="560" src="https://www.youtube.com/embed/-xMBjPHBOe8?si=lsu12Tkm7ZFu9vZO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+            <iframe width="500" height="560" src="https://www.youtube.com/embed/mCoqSFsEgcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </main>
+        <aside class="right">
+            <br>
+            <div>
+                <i class="fa-brands fa-instagram fa-bounce"></i>
+                <button>
+                    <a target="_blank" href="https://www.instagram.com/ykfrcharm.i.a/">@YKFRCHARMIA</a>
+                </button><br><br>
+                <i class="fa-brands fa-square-youtube fa-bounce"></i>
+                <button>
+                    <a target="_blank" href="https://youtu.be/-xMBjPHBOe8?si=jAh3IEphvNjjEAh-"> @YKFRCHARMIA</a>
+                </button>
+            <h2 style="font-family: fantasy;">THISIS4THESTREET</h2>
+        </aside>
+    </main>
+
+    <footer>
+    </footer>
+<!-- body -->
+   <script>
+let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+   </script> 
+</body>
+</html>

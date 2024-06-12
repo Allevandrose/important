@@ -1,0 +1,295 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library boxicons</title>
+    <link rel="stylesheet" href="slide.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js"
+        integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <box-icon type='solid' name='home'></box-icon>
+    <box-icon name='briefcase'></box-icon>
+    <box-icon type='solid' name='star'></box-icon>
+    <box-icon type='solid' name='star-half'></box-icon>
+    <box-icon type='logo' name='mongodb'></box-icon>
+    <box-icon name='facebook' type='logo'></box-icon>
+    <box-icon type='logo' name='whatsapp-square'></box-icon>
+    <box-icon type='solid' name='envelope'></box-icon>
+    <box-icon type='solid' name='phone-call'></box-icon>
+    <box-icon type='logo' name='github'></box-icon>
+    <box-icon name='dialpad-alt'></box-icon>
+    <box-icon type='solid' name='download'></box-icon>
+    <box-icon name='download' flip='horizontal'></box-icon>
+    <box-icon name='toggle-right'></box-icon>
+    <box-icon name='toggle-left' type='solid'></box-icon>
+    <box-icon type='solid' name='grid'></box-icon>
+    <box-icon type='solid' name='customize'></box-icon>
+    <box-icon name='grid-alt'></box-icon>
+    <box-icon name='grid-alt' type='solid'></box-icon>
+    <box-icon name='user-circle' type='solid'></box-icon>
+    <box-icon type='solid' name='cart'></box-icon>
+    <box-icon type='logo' name='html5' s></box-icon>
+    <box-icon type='logo' name='javascript'></box-icon>
+    <box-icon name='file-css' type='solid'></box-icon>
+    <box-icon type='solid' name='plus-circle'></box-icon>
+    <box-icon type='solid' name='minus-circle'></box-icon>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: "Roboto Condensed", sans-serif; */
+        }
+
+        body {
+            display: flex;
+            background: #f2f2f2;
+        }
+
+        .menu {
+            z-index: 100;
+        }
+
+        .side-bar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 300px;
+            height: 100vh;
+            background: #fff;
+            padding: 12px;
+            box-shadow: -3px -3px 7px #ffffff,
+                3px 3px 5px #ceced1,
+                inset -3px 7px #ffffff,
+                inset 3px 5px #ceced1;
+            transition: all 0.9s ease;
+        }
+
+        .side-bar .title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .side-bar .title .logo {
+            font-size: 27px;
+            font-weight: 600;
+            color: #31344b;
+        }
+
+        .slide-icons ul {
+            margin-top: 15px;
+            list-style: none;
+        }
+
+        .slide-icons ul a {
+            color: #31344b;
+            text-decoration: none;
+            display: block;
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 5px 25px;
+            border-radius: 6px;
+            box-shadow: -3px -3px 7px #ffffff,
+                3px 3px 5px #ceced1;
+            position: relative;
+        }
+
+        .slide-icons ul i {
+            margin-right: 10px;
+        }
+
+        .media-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .icons {
+            margin: 0 4px;
+            font-size: 17px;
+            cursor: pointer;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            box-shadow: -3px -3px 7px #ffffff,
+                3px 3px 5px #ceced1;
+            position: relative;
+        }
+
+        .slide-icons ul a:hover:before,
+        .icons:hover:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: inset -3px 7px #ffffff,
+                inset 3px 5px #ceced1;
+        }
+
+        .slide-icons ul a:hover:before {
+            border-radius: 6px;
+            color: #3498db;
+        }
+
+        .slide-icons ul a:hover {
+            color: #3498db;
+        }
+
+        .icons:hover:before {
+            border-radius: 50%;
+        }
+
+        .icons:nth-child(1) {
+            color: #4267b2;
+        }
+
+        .icons:nth-child(2) {
+            color: #007700;
+            font-weight: 400;
+        }
+
+        .icons:nth-child(3) {
+            color: #e1306c;
+        }
+
+        label {
+            font-size: 17px;
+            color: #31344b;
+            box-shadow: -3px -3px 7px #ffffff,
+                3px 3px 5px #ceced1;
+            height: 37px;
+            width: 37px;
+            border-radius: 6px;
+            text-align: center;
+            line-height: 37px;
+            transition: 0.3s ease;
+        }
+
+        .bars {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+        }
+
+        label:hover {
+            box-shadow: inset -3px 7px #ffffff,
+                inset 3px 5px #ceced1;
+            color: #3498db;
+        }
+
+        #check {
+            display: none;
+        }
+
+        #check:checked~.side-bar {
+            left: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            background-color: #fff;
+            margin-right: 10px;
+            border-radius: 15px;
+            z-index: 0;
+            margin-left: 300px;
+            transition: margin-left 0.5s ease;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 70px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 101;
+        }
+
+        .greeting {
+            max-width: 350px;
+            background-color: #007700;
+            font-size: 40px;
+            font-weight: 600;
+            margin-left: 300px;
+            transition: margin-left 0.5s ease;
+        }
+
+        .image {
+            width: 100%;
+            height: 500px;
+            background-color: blue;
+            margin-left: 300px;
+            transition: margin-left 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <label for="check" class="bars">
+        <i class="fas fa-bars"></i>
+    </label>
+    <div class="side-bar">
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-qrcode"></i>DashBoard</a></li>
+            <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>About</a></li>
+            <li><a href="#"><i class="fa-solid fa-computer"></i>Skills</a></li>
+            <li><a href="#"><i class="fa-solid fa-sliders-h"></i>Services</a></li>
+            <li><a href="#"><i class="fa-solid fa-cog"></i>Projects</a></li>
+            <li><a href="#"><i class="fa-solid fa-phone"></i>Contacts</a></li>
+        </ul>
+        <div class="media-icons">
+            <div class="icons"><i class="fab fa-facebook-f"></i></div>
+            <div class="icons"><i class="fab fa-whatsapp"></i></div>
+            <div class="icons"><i class="fab fa-instagram"></i></div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="navbar">
+            <h2 class="greeting">Hello!</h2>
+        </div>
+        <div class="image">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum labore, asperiores recusandae sed facere
+            dolor magni error impedit. Soluta doloremque sequi repellat recusandae, nesciunt tempora accusantium?
+            Numquam consectetur tempore hic.
+        </div>
+    </div>
+    <script>
+        // Your updated JavaScript code here
+    </script>
+</body>
+
+</html>

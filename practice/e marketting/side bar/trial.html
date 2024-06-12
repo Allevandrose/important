@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="slide.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card {
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card h1 {
+            background-color: orange;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0;
+        }
+
+        #check {
+            display: none;
+        }
+
+        #check:checked~.side-bar {
+            left: 0;
+        }
+
+        .side-bar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #fff;
+            transition: left 0.3s ease-out;
+            z-index: 1000;
+        }
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            color: #fff;
+        }
+
+        .nav-links {
+            padding: 10px;
+        }
+
+        .nav-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-bottom: 5px;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 5px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            background-color: #fff;
+        }
+
+        .media-icons {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .media-icons li {
+            margin: 0 5px;
+        }
+
+        .media-icons a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .button {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            background-color: #fff;
+            border: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-out;
+        }
+
+        .button:hover {
+            background-color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .side-bar {
+                left: -100%;
+            }
+
+            #check:checked~.side-bar {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" name="" id="check">
+        <label class="button bars" for="check"><i class="fas fa-bars"></i></label>
+        <div class="side-bar">
+            <div class="title">
+                <div class="logo">
+                    <h3>Ibrahim</h3>
+                </div>
+                <label class="button times" for="check"><i class="fas fa-times"></i></label>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-qrcode"></i>
+                            </span>
+                            <span class="text">
+                                Dashboard
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-house"></i>
+                            </span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span class="text">
+                                About
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-briefcase"></i>
+                            </span>
+                            <span class="text">
+                                Skills
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-sliders-h"></i>
+                            </span>
+                            <span class="text">
+                                Services
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-wrench"></i>
+                            </span>
+                            <span class="text">Projects
+
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-phone-volume"></i>
+                            </span>
+                            <span class="text">
+                                Contacts
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-cog"></i>
+                            </span>
+                            <span class="text">
+                                Settings
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fas fa-moon"></i>
+                            </span>
+                            <span class="text">
+                                Themes
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="media-icons">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="micon1">
+                                <i class="fab fa-facebook-f"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="micon2">
+                                <i class="fab fa-whatsapp"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="micon3">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="display">
+            <div class="card">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, maxime?</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
